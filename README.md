@@ -5,7 +5,7 @@ Table of Contents
 - Introduction
 - Prerequisites
 - Step-by-Step Guide
-| - Install Required Python Packages
+ - Install Required Python Packages
 | - Install usbipd-win on Windows
 | - Install usbipd on WSL
 | -List USB Devices in Windows
