@@ -5,10 +5,10 @@ Table of Contents
 - [Introduction](#item-1)
 - [Prerequisites](#item-2)
 - [Step-by-Step Guide](item-3)
-  - Install Python3.9 and setup a virtual environment
-  - Install Required Python Packages
-  - Install usbipd-win on Windows
-  - Install usbipd on WSL
+  - [Install Python3.9 and set up a virtual environment](item-3-1)
+  - [Install Required Python Packages](item-3-2)
+  - [Install usbipd-win on Windows](item-3-3)
+  - [Install usbipd on WSL](item-3-4)
   - List USB Devices in Windows
   - Bind and Share the USB Device
   - Attach USB Device to WSL
@@ -34,8 +34,64 @@ This guide aims to help you successfully set up the Coral USB Accelerator on a s
 
 - <a id="item-3"></a>
 ## Step-by-Step Guide
+<a id="item-3-1"></a>
+### Install Python3.9 and set up a virtual environment
 
-- <a id="item-3-1"></a>
-### Install Python3.9 and setup a virtual environment
+See https://github.com/ctch3ng/Installing-Different-Versions-of-Python-and-Managing-Virtual-Environments for details.
 
-See https://github.com/ctch3ng/Installing-Different-Versions-of-Python-and-Managing-Virtual-Environments for details
+<a id="item-3-2"></a>
+### Install Required Python Packages
+
+Install the Edge TPU runtime and `pycoral` library using the wheels, along with Pillow, and downgrade numpy to a compatible version:
+
+```
+pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl
+pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/pycoral-2.0.0-cp39-cp39-linux_x86_64.whl
+pip install Pillow
+pip install "numpy<2"
+```
+
+Note: The above code is for Python3.9. You can find other versions here https://coral.ai/software/#debian-packages .
+
+<a id="item-3-3"></a>
+### Install usbipd-win on Windows
+
+Go to the usbipd-win release page https://github.com/dorssel/usbipd-win/releases/tag/v4.3.0 .
+Download the .msi installer file and run it to install.
+
+Note: For details, visit https://learn.microsoft.com/en-us/windows/wsl/connect-usb .
+
+<a id="item-3-4"></a>
+### Install usbipd on WSL
+
+Open a WSL terminal and run:
+```
+sudo apt-get update
+sudo apt-get install usbutils
+```
+
+<a id="item-3-5"></a>
+### List USB Devices in Windows
+
+In Windows, open PowerShell as `Administrator` and run:
+
+```
+usbipd list
+```
+
+Note the BUSID of the Coral USB Accelerator. The following codes assume the BUSID is 1-4
+
+<a id="item-3-6"></a>
+### Bind and Share the USB Device
+
+In the Windows PowerShell, run the following command to bind and attach the device to the default WSL VM:
+
+```
+usbipd bind --force -b 1-4
+usbipd attach --wsl --busid 1-4
+```
+
+Note: If your default WSL is something else, you will need to run `wsl --setdefault Ubuntu-24.04` to upadte it first.
+
+
+
