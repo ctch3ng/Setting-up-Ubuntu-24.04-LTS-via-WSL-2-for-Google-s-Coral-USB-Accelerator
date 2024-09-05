@@ -3,7 +3,7 @@ This guide provides step-by-step instructions to set up the Google Coral USB Acc
 
 Table of Contents
 - [Introduction](#item-1)
-- Prerequisites
+- [Prerequisites](#item-2)
 - Step-by-Step Guide
   - Install Required Python Packages
   - Install usbipd-win on Windows
@@ -19,3 +19,14 @@ Table of Contents
 
 <a id="item-1"></a>
 ## Introduction
+
+The Coral USB Accelerator by Google is a USB device that provides an Edge TPU, a small ASIC designed to accelerate machine learning inference at the edge. However, setting up the Coral USB Accelerator on WSL2 can present challenges due to outdated documentation and Python version issues.
+
+This guide aims to help you successfully set up the Coral USB Accelerator on a system running Windows 11 with WSL2 and Ubuntu 24.04 LTS.
+
+<a id="item-2"></a>
+## Prerequisites
+- Windows 11 with WSL2 enabled
+- Ubuntu 24.04 LTS installed on WSL2
+- Coral USB Accelerator
+- Admin access to the Windows machine
