@@ -5,14 +5,14 @@ Table of Contents
 - Introduction
 - Prerequisites
 - Step-by-Step Guide
- - Install Required Python Packages
-| - Install usbipd-win on Windows
-| - Install usbipd on WSL
-| -List USB Devices in Windows
-| -Bind and Share the USB Device
-| -Attach USB Device to WSL
-| -Verify Device Attachment in WSL
-| -Make the Coral TPU Unavailable from Host PC (If Required)
+  - Install Required Python Packages
+  - Install usbipd-win on Windows
+  - Install usbipd on WSL
+  - List USB Devices in Windows
+  - Bind and Share the USB Device
+  - Attach USB Device to WSL
+  - Verify Device Attachment in WSL
+  - Make the Coral TPU Unavailable from Host PC (If Required)
 - Troubleshooting Tips
 - References
 - Contributors
