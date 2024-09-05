@@ -28,7 +28,7 @@ This guide aims to help you successfully set up the Coral USB Accelerator on a s
 - Coral USB Accelerator
 - Admin access to the Windows machine
 
-- <a id="item-3"></a>
+<a id="item-3"></a>
 ## Step-by-Step Guide
 <a id="item-3-1"></a>
 ### Install Python3.9 and set up a virtual environment
