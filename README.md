@@ -4,15 +4,15 @@ This guide provides step-by-step instructions to set up the Google Coral USB Acc
 Table of Contents
 - [Introduction](#item-1)
 - [Prerequisites](#item-2)
-- [Step-by-Step Guide](item-3)
-  - [Install Python3.9, set up and activate a virtual environment](item-3-1)
-  - [Install Required Python Packages](item-3-2)
-  - [Install usbipd-win on Windows](item-3-3)
-  - [Install usbipd on WSL](item-3-4)
-  - [List USB Devices in Windows](item-3-5)
-  - [Bind and Attach the USB Device](item-3-6)
-  - [Verify Device Attachment in WSL](item-3-6)
-- [Run a model on the Edge TPU](item-4)
+- [Step-by-Step Guide](#item-3)
+  - [Install Python3.9, set up and activate a virtual environment](#item-3-1)
+  - [Install Required Python Packages](#item-3-2)
+  - [Install usbipd-win on Windows](#item-3-3)
+  - [Install usbipd on WSL](#item-3-4)
+  - [List USB Devices in Windows](#item-3-5)
+  - [Bind and Attach the USB Device](#item-3-6)
+  - [Verify Device Attachment in WSL](#item-3-6)
+- [Run a model on the Edge TPU](#item-4)
 
 <a id="item-1"></a>
 ## Introduction
