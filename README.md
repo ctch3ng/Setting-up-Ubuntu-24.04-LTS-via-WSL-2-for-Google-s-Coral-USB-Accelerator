@@ -4,7 +4,8 @@ This guide provides step-by-step instructions to set up the Google Coral USB Acc
 Table of Contents
 - [Introduction](#item-1)
 - [Prerequisites](#item-2)
-- Step-by-Step Guide
+- [Step-by-Step Guide](item-3)
+  - Install Python3.9 and setup a virtual environment
   - Install Required Python Packages
   - Install usbipd-win on Windows
   - Install usbipd on WSL
@@ -30,3 +31,11 @@ This guide aims to help you successfully set up the Coral USB Accelerator on a s
 - Ubuntu 24.04 LTS installed on WSL2
 - Coral USB Accelerator
 - Admin access to the Windows machine
+
+- <a id="item-3"></a>
+## Step-by-Step Guide
+
+- <a id="item-3-1"></a>
+### Install Python3.9 and setup a virtual environment
+
+See https://github.com/ctch3ng/Installing-Different-Versions-of-Python-and-Managing-Virtual-Environments for details
