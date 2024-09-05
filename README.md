@@ -79,7 +79,7 @@ usbipd list
 Note the BUSID of the Coral USB Accelerator. The following codes assume the BUSID is 1-4
 
 <a id="item-3-6"></a>
-### Bind and Share the USB Device
+### Bind and Attach the USB Device
 
 In the Windows PowerShell, run the following command to bind and attach the device to the default WSL VM:
 
