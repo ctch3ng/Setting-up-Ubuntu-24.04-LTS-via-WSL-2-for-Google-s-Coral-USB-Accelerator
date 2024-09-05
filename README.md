@@ -42,10 +42,10 @@ See https://github.com/ctch3ng/Installing-Different-Versions-of-Python-and-Manag
 Install the Edge TPU runtime and `pycoral` library using the wheels, along with Pillow, and downgrade numpy to a compatible version:
 
 ```
-pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl
-pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/pycoral-2.0.0-cp39-cp39-linux_x86_64.whl
-pip install Pillow
-pip install "numpy<2"
+python3.9 -m pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl
+python3.9 -m pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/pycoral-2.0.0-cp39-cp39-linux_x86_64.whl
+python3.9 -m pip install Pillow
+python3.9 -m pip install "numpy<2"
 ```
 
 Note: The above code is for Python3.9. You can find other versions here https://coral.ai/software/#debian-packages .
@@ -109,7 +109,7 @@ cd pycoral
 
 bash examples/install_requirements.sh classify_image.py
 
-python3 examples/classify_image.py \
+python3.9 examples/classify_image.py \
 --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 --labels test_data/inat_bird_labels.txt \
 --input test_data/parrot.jpg
