@@ -5,18 +5,14 @@ Table of Contents
 - [Introduction](#item-1)
 - [Prerequisites](#item-2)
 - [Step-by-Step Guide](item-3)
-  - [Install Python3.9 and set up a virtual environment](item-3-1)
+  - [Install Python3.9, set up and activate a virtual environment](item-3-1)
   - [Install Required Python Packages](item-3-2)
   - [Install usbipd-win on Windows](item-3-3)
   - [Install usbipd on WSL](item-3-4)
-  - List USB Devices in Windows
-  - Bind and Share the USB Device
-  - Attach USB Device to WSL
-  - Verify Device Attachment in WSL
-  - Make the Coral TPU Unavailable from Host PC (If Required)
-- Troubleshooting Tips
-- References
-- Contributors
+  - [List USB Devices in Windows](item-3-5)
+  - [Bind and Attach the USB Device](item-3-6)
+  - [Verify Device Attachment in WSL](item-3-6)
+- [Run a model on the Edge TPU](item-4)
 
 <a id="item-1"></a>
 ## Introduction
@@ -93,5 +89,27 @@ usbipd attach --wsl --busid 1-4
 
 Note: If your default WSL is something else, you will need to run `wsl --setdefault Ubuntu-24.04` to upadte it first.
 
+<a id="item-3-7"></a>
+### Verify Device Attachment in WSL
 
+In WSL, run `lsusb` to confirm the device is listed. Look for “Google Inc.” in the list.
 
+<a id="item-4"></a>
+## Run a model on the Edge TPU
+
+Now, you can return to https://coral.ai/docs/accelerator/get-started/#3-run-a-model-on-the-edge-tpu to follow the procedures, which are replicated as follow.
+
+```
+mkdir coral && cd coral
+
+git clone https://github.com/google-coral/pycoral.git
+
+cd pycoral
+
+bash examples/install_requirements.sh classify_image.py
+
+python3 examples/classify_image.py \
+--model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
+--labels test_data/inat_bird_labels.txt \
+--input test_data/parrot.jpg
+```
