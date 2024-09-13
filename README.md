@@ -42,6 +42,16 @@ See https://github.com/ctch3ng/Installing-Different-Versions-of-Python-and-Manag
 Install the Edge TPU runtime and `pycoral` library using the wheels, along with Pillow, and downgrade numpy to a compatible version:
 
 ```
+echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+sudo apt-get update
+
+sudo apt-get install libedgetpu1-std
+```
+
+```
 python3.9 -m pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl
 python3.9 -m pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/pycoral-2.0.0-cp39-cp39-linux_x86_64.whl
 python3.9 -m pip install Pillow
