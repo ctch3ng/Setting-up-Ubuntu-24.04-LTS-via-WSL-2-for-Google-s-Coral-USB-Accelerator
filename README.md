@@ -138,14 +138,30 @@ python3.9 examples/classify_image.py \
 <a id="item-5"></a>
 ## Troubleshooting
 
-[Windows] In PowerShell, run the following all at once while WSL is running.
+[Windows] In PowerShell, run the following all at once while WSL is open and `venv` is activated.
 
 ```
-usbipd unbind -a
 usbipd unbind -a
 usbipd bind --force -b 1-4
 usbipd attach --wsl -b 1-4
 usbipd list
 ```
+[WSL] Run an example (it will fail, don't worry) [It appears that running this will trigger the device to change its ID]
 
+```
+cd coral
+cd pycoral
+python3.9 examples/classify_image.py \
+--model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
+--labels test_data/inat_bird_labels.txt \
+--input test_data/parrot.jpg
+```
+[Windows] Back to PowerShell, run the following all at once (again) while WSL is open and `venv` is activated.
+
+```
+usbipd unbind -a
+usbipd bind --force -b 1-4
+usbipd attach --wsl -b 1-4
+usbipd list
+```
 [Windows] Look for “Google Inc.” in the list. If showing `Global Unichip Corp.`, repeat the steps above.
