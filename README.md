@@ -145,4 +145,7 @@ usbipd unbind -a
 usbipd unbind -a
 usbipd bind --force -b 1-4
 usbipd attach --wsl -b 1-4
+usbipd list
 ```
+
+[Windows] Look for “Google Inc.” in the list. If showing `Global Unichip Corp.`, repeat the steps above.
