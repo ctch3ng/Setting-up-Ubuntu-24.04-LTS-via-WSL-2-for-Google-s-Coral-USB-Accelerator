@@ -97,7 +97,7 @@ sudo apt-get install usbutils
 usbipd list
 ```
 
-Note the BUSID of the Coral USB Accelerator. The following codes assume the BUSID is 1-4
+Note the BUSID of the Coral USB Accelerator (shown as `Unknown`). The following codes assume the BUSID is 1-4
 
 <a id="item-3-6"></a>
 ### Bind and Attach the USB Device
@@ -109,7 +109,7 @@ usbipd bind --force -b 1-4
 usbipd attach --wsl --busid 1-4
 ```
 
-Note: If your default WSL is something else, you will need to run `wsl --setdefault Ubuntu-24.04` to upadte it first.
+Note: If your default WSL is something else, you will need to run `wsl --setdefault Ubuntu-24.04` to update it first.
 
 <a id="item-3-7"></a>
 ### Verify Device Attachment in WSL
@@ -119,7 +119,7 @@ Note: If your default WSL is something else, you will need to run `wsl --setdefa
 <a id="item-4"></a>
 ## Run a model on the Edge TPU
 
-[WSL] Now, you can return to https://coral.ai/docs/accelerator/get-started/#3-run-a-model-on-the-edge-tpu to follow the procedures, which are replicated as follow.
+[WSL] Now, you can return to https://coral.ai/docs/accelerator/get-started/#3-run-a-model-on-the-edge-tpu to follow the procedures, which are replicated as follows.
 
 ```
 mkdir coral && cd coral
@@ -148,7 +148,7 @@ usbipd list
 ```
 [WSL] Run an example (it will fail, don't worry) [It appears that running this will trigger the device to change its ID]
 
-Note: assume you are at `~\coral\pycoral\`, and you have the examples installed. If not, back to [Run a model on the Edge TPU](#item-4).
+Note: assume you are at `~\coral\pycoral\`, and you have the examples installed. If not, go back to [Run a model on the Edge TPU](#item-4).
 
 ```
 python3.9 examples/classify_image.py \
@@ -164,7 +164,7 @@ usbipd bind --force -b 1-4
 usbipd attach --wsl -b 1-4
 usbipd list
 ```
-[WSL] Run the example (again). This time shoud work. If not, repeat the process.
+[WSL] Run the example (again). This time, it should work. If not, repeat the process.
 
 Note: assume you are at `~\coral\pycoral\`.
 
