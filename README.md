@@ -148,7 +148,7 @@ usbipd list
 ```
 [WSL] Run an example (it will fail, don't worry) [It appears that running this will trigger the device to change its ID]
 
-Note: assume you are at `~\coral\pycoral\`.
+Note: assume you are at `~\coral\pycoral\`, and you have the examples installed. If not, back to [Run a model on the Edge TPU](#item-4).
 
 ```
 python3.9 examples/classify_image.py \
