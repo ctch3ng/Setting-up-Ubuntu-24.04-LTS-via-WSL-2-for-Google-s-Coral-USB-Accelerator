@@ -39,17 +39,27 @@ See https://github.com/ctch3ng/Installing-Different-Versions-of-Python-and-Manag
 <a id="item-3-2"></a>
 ### Install Required Python Packages
 
-Install the Edge TPU runtime and `pycoral` library using the wheels, along with Pillow, and downgrade numpy to a compatible version:
+[WSL] Update 'apt-get' with Coral's REPO
 
 ```
 echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
-
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-
 sudo apt-get update
+```
 
+Install the Edge TPU runtime.
+
+```
 sudo apt-get install libedgetpu1-std
 ```
+
+Plug-in your Coral USB Accelerator. Reboot your WSL by hitting `Windows Key + R` to open Windows' `Run` command and run the following
+
+```
+wsl.exe --shutdown
+```
+
+Install the `pycoral` library using the wheels, along with Pillow, and downgrade numpy to a compatible version:
 
 ```
 python3.9 -m pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl
