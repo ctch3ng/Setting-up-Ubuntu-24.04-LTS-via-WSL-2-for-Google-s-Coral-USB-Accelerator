@@ -13,6 +13,7 @@ Table of Contents
   - [Bind and Attach the USB Device](#item-3-6)
   - [Verify Device Attachment in WSL](#item-3-6)
 - [Run a model on the Edge TPU](#item-4)
+- [Troubleshooting](#item-5)
 
 <a id="item-1"></a>
 ## Introduction
@@ -113,7 +114,7 @@ Note: If your default WSL is something else, you will need to run `wsl --setdefa
 <a id="item-3-7"></a>
 ### Verify Device Attachment in WSL
 
-[WSL] In WSL, run `lsusb` to confirm the device is listed. Look for “Google Inc.” in the list.
+[WSL] In WSL, run `lsusb` to confirm the device is listed. Look for “Google Inc.” in the list. If showing `Global Unichip Corp.`, see [Troubleshooting](#item-5).
 
 <a id="item-4"></a>
 ## Run a model on the Edge TPU
@@ -133,4 +134,15 @@ python3.9 examples/classify_image.py \
 --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 --labels test_data/inat_bird_labels.txt \
 --input test_data/parrot.jpg
+```
+<a id="item-5"></a>
+## Troubleshooting
+
+[Windows] In PowerShell, run the following all at once while WSL is running.
+
+```
+usbipd unbind -a
+usbipd unbind -a
+usbipd bind --force -b 1-4
+usbipd attach --wsl -b 1-4
 ```
