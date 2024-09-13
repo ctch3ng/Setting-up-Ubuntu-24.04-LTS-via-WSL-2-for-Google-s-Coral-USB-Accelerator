@@ -47,7 +47,7 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt-get update
 ```
 
-Install the Edge TPU runtime.
+[WSL] Install the Edge TPU runtime.
 
 ```
 sudo apt-get install libedgetpu1-std
@@ -59,7 +59,7 @@ Plug-in your Coral USB Accelerator. Reboot your WSL by hitting `Windows Key + R`
 wsl.exe --shutdown
 ```
 
-Install the `pycoral` library using the wheels, along with Pillow, and downgrade numpy to a compatible version:
+[WSL] Install the `pycoral` library using the wheels, along with Pillow, and downgrade numpy to a compatible version:
 
 ```
 python3.9 -m pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl
@@ -81,7 +81,7 @@ Note: For details, visit https://learn.microsoft.com/en-us/windows/wsl/connect-u
 <a id="item-3-4"></a>
 ### Install usbipd on WSL
 
-Open a WSL terminal and run:
+[WSL] Open a WSL terminal and run:
 ```
 sudo apt-get update
 sudo apt-get install usbutils
@@ -90,7 +90,7 @@ sudo apt-get install usbutils
 <a id="item-3-5"></a>
 ### List USB Devices in Windows
 
-In Windows, open PowerShell as `Administrator` and run:
+[Windows] In Windows, open PowerShell as `Administrator` and run:
 
 ```
 usbipd list
@@ -101,7 +101,7 @@ Note the BUSID of the Coral USB Accelerator. The following codes assume the BUSI
 <a id="item-3-6"></a>
 ### Bind and Attach the USB Device
 
-In the Windows PowerShell, run the following command to bind and attach the device to the default WSL VM:
+[Windows] In the Windows PowerShell, run the following command to bind and attach the device to the default WSL VM:
 
 ```
 usbipd bind --force -b 1-4
@@ -113,12 +113,12 @@ Note: If your default WSL is something else, you will need to run `wsl --setdefa
 <a id="item-3-7"></a>
 ### Verify Device Attachment in WSL
 
-In WSL, run `lsusb` to confirm the device is listed. Look for “Google Inc.” in the list.
+[WSL] In WSL, run `lsusb` to confirm the device is listed. Look for “Google Inc.” in the list.
 
 <a id="item-4"></a>
 ## Run a model on the Edge TPU
 
-Now, you can return to https://coral.ai/docs/accelerator/get-started/#3-run-a-model-on-the-edge-tpu to follow the procedures, which are replicated as follow.
+[WSL] Now, you can return to https://coral.ai/docs/accelerator/get-started/#3-run-a-model-on-the-edge-tpu to follow the procedures, which are replicated as follow.
 
 ```
 mkdir coral && cd coral
