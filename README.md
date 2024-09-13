@@ -148,9 +148,9 @@ usbipd list
 ```
 [WSL] Run an example (it will fail, don't worry) [It appears that running this will trigger the device to change its ID]
 
+Note: assume you are at `~\coral\pycoral\`.
+
 ```
-cd coral
-cd pycoral
 python3.9 examples/classify_image.py \
 --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 --labels test_data/inat_bird_labels.txt \
@@ -164,4 +164,13 @@ usbipd bind --force -b 1-4
 usbipd attach --wsl -b 1-4
 usbipd list
 ```
-[Windows] Look for “Google Inc.” in the list. If showing `Global Unichip Corp.`, repeat the steps above.
+[WSL] Run the example (again). This time shoud work. If not, repeat the process.
+
+Note: assume you are at `~\coral\pycoral\`.
+
+```
+python3.9 examples/classify_image.py \
+--model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
+--labels test_data/inat_bird_labels.txt \
+--input test_data/parrot.jpg
+```
