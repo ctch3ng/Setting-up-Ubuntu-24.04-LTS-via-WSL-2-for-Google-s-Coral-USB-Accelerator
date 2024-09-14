@@ -110,6 +110,8 @@ sudo guvcview
 
 ### 10. Try Google Coral Example
 
+Reference: https://github.com/google-coral/examples-camera
+
 ```bash
 cd ~
 mkdir coral && cd coral
