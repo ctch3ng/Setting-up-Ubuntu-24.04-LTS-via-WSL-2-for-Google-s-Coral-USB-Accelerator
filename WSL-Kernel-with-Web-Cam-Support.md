@@ -120,15 +120,3 @@ cd gstreamer
 bash install_requirements.sh
 python3.9 detect.py
 ```
-
-## Troubleshooting
-
-If you encounter any issues, please check the WSL documentation or open an issue in this repository.
-
-## Contributing
-
-Contributions to improve this guide are welcome. Please submit a pull request or open an issue to discuss proposed changes.
-
-## License
-
-[Specify your license here]
