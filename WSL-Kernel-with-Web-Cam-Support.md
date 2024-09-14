@@ -64,7 +64,7 @@ Run the menuconfig tool:
 sudo make menuconfig
 ```
 
-In the manual configuration, enable the following options (use spacebar to select `*`):
+In the manual configuration, enable the following options (hit the spacebar twice to mark option with `*`, i.e. kernel built-in):
 
 - Device Drivers -> Multimedia support -> Filter media drivers
 - Device Drivers -> Multimedia support -> Media device types -> Cameras and video grabbers
