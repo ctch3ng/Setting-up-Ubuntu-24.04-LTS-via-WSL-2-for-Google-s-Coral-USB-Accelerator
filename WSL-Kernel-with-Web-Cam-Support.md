@@ -91,7 +91,7 @@ sudo cp -rf vmlinux /mnt/c/Sources/
 
 ### 8. Configure WSL to Use New Kernel
 
-In your Windows user folder, create a file named `.wslconfig` with the following content:
+In your Windows' user folder, i.e. `C:\user\<your user name\`, create a file named `.wslconfig` with the following content:
 
 ```
 [wsl2]
