@@ -14,6 +14,7 @@ Table of Contents
   - [Verify Device Attachment in WSL](#item-3-6)
 - [Run a model on the Edge TPU](#item-4)
 - [Troubleshooting](#item-5)
+- [WSL with Web Cam Support](https://github.com/ctch3ng/Setting-up-Ubuntu-24.04-LTS-via-WSL-2-for-Google-s-Coral-USB-Accelerator/blob/main/WSL-Kernel-with-Web-Cam-Support.md)
 
 <a id="item-1"></a>
 ## Introduction
