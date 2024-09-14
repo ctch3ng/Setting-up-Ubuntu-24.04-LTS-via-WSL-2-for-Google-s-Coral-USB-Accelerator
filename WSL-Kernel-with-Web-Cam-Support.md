@@ -2,6 +2,8 @@
 
 This guide will walk you through the process of building a custom WSL2 kernel with USB camera support.
 
+Reference: https://youtu.be/t_YnACEPmrM?feature=shared
+
 ## Prerequisites
 
 - Windows Subsystem for Linux (WSL2) installed
