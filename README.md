@@ -138,9 +138,10 @@ python3.9 examples/classify_image.py \
 <a id="item-5"></a>
 ## Troubleshooting
 
-[Windows] In PowerShell, run the following all at once while WSL is open and `venv` is activated.
+[Windows] In PowerShell, run the following all at once while WSL is open and `venv` is activated. The line `usbipd unbind -a` needs to be executed twice on some systems to make it work.
 
 ```
+usbipd unbind -a
 usbipd unbind -a
 usbipd bind --force -b 1-4
 usbipd attach --wsl -b 1-4
@@ -159,6 +160,7 @@ python3.9 examples/classify_image.py \
 [Windows] Back to PowerShell, run the following all at once (again) while WSL is open and `venv` is activated.
 
 ```
+usbipd unbind -a
 usbipd unbind -a
 usbipd bind --force -b 1-4
 usbipd attach --wsl -b 1-4
