@@ -39,13 +39,15 @@ This guide aims to help you successfully set up the Coral USB Accelerator on a s
 See https://github.com/ctch3ng/Installing-Different-Versions-of-Python-and-Managing-Virtual-Environments for details.
 
 <a id="item-3-2"></a>
-### Install Required Python Packages
+### Install Required Python Packages (See https://coral.ai/docs/accelerator/get-started/#requirements for the latest instructions)
 
 [WSL] Update 'apt-get' with Coral's REPO
 
 ```
 echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
 sudo apt-get update
 ```
 
